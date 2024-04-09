@@ -9,22 +9,29 @@ body{
     background-color: #e5e5f7;
     opacity: 0.8;
     background-image: radial-gradient(circle at center center, #45f7ef, #e5e5f7), repeating-radial-gradient(circle at center center, #45f7ef, #45f7ef, 10px, transparent 20px, transparent 10px);
-    background-blend-mode: multiply;    
+    background-blend-mode: multiply;  
+    overflow-x: hidden;  
 }
 
 h1{
     font-size: 50px;
     color: black;
     font-weight: bold;
+    text-shadow: 2px 2px 2px grey;
 }
 
 .box{
     background-color: #e5e5f7;
+    box-shadow: 10px 10px 13px 0px rgba(153,150,153,0.67);
     width: 400px;
     height: 200px;
     margin: 10px;
     border-radius: 30px;
-    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
 }
 
 h2{
@@ -32,4 +39,9 @@ h2{
     color:black;
     text-align: center;
     font-weight: bold;
+    text-shadow: 2px 2px 2px grey;
+}
+
+.box.show{
+    transform: translateX(0); 
 }
